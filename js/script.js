@@ -1,0 +1,19 @@
+$(document).ready(function(){
+    $('#mycarousel').hover(function(){
+        $('#mycarousel').carousel('pause');
+        $("#carousel-Button").click(function(){
+            if($('#carousel-Button').children('span').hasClass('fa-pause'))
+            {
+               $('#mycarousel').carousel('pause');
+               $('#carousel-Button').children('span').removeClass('fa-pause');
+               $('#carousel-Button').children('span').addClass('fa-play'); 
+            }
+         else
+         {
+             $('#mycarousel').carousel('cycle');
+             $('#carousel-Button').children('span').removeClass('fa-play');
+             $('#carousel-Button').children('span').addClass('fa-pause'); 
+         }
+         });
+    });
+});
